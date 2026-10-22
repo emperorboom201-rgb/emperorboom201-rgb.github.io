@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web của tôi</title>
+    
+    <!-- 1. DÁN MÃ CSS VÀO ĐÂY (nằm bên trong thẻ <style>) -->
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background-color: #ff7675;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #d63031;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 2. DÁN MÃ HTML VÀO ĐÂY (nằm bên trong thẻ <body>) -->
+    <header class="hero-section">
+        <div class="container">
+            <h1>Chào mừng đến với trang web của tôi</h1>
+            <p>Khám phá các tính năng thú vị và giao diện tuyệt đẹp tại đây.</p>
+            <button id="cta-button" class="btn">Bấm vào tôi</button>
+        </div>
+    </header>
+
+    <!-- 3. DÁN MÃ JAVASCRIPT VÀO ĐÂY (nằm bên trong thẻ <script>, thường đặt trước khi đóng thẻ </body>) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ctaButton = document.getElementById("cta-button");
+            
+            if (ctaButton) {
+                ctaButton.addEventListener("click", function() {
+                    alert("Cảm ơn bạn đã ghé thăm trang web! Chúc bạn một ngày tốt lành.");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
